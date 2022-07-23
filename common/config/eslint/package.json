@@ -1,0 +1,35 @@
+{
+  "name": "@common/eslint-config",
+  "version": "0.0.0",
+  "main": "eslintrc.cjs",
+  "files": [
+    "eslintrc.cjs"
+  ],
+  "dependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "@jambit/eslint-plugin-typed-redux-saga": "^0.3.1",
+    "prettier": "^2.3.2",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "@rushstack/eslint-patch": "^1.0.6"
+  },
+  "scripts": {
+    "build": "exit 0;",
+    "build:watch": "pnpm run build",
+    "rebuild": "exit 0;",
+    "dev": "exit 0;",
+    "clean": "exit 0;",
+    "lint": "exit 0;",
+    "test": "exit 0;"
+  }
+}

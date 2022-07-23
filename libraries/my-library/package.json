@@ -1,0 +1,47 @@
+{
+  "name": "my-library",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "dist": "dist",
+    "src": "src"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "pnpx eslint --ext .ts,.tsx ./src",
+    "build": "pnpx rollup -c",
+    "build:watch": "pnpm run build -- --assumeChangesOnlyAffectDirectDependencies",
+    "rebuild": "pnpm run clean && pnpm run build",
+    "clean": "pnpx rimraf dist/ && exit 0",
+    "dev": "pnpx rollup -wc",
+    "test": "pnpx jest --passWithNoTests",
+    "test:watch": "pnpx jest --coverage --watchAll",
+    "test:prod": "pnpm run lint && pnpm run test -- --no-cache"
+  },
+  "dependencies": {
+    "tslib": "^2.3.1"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.0.1",
+    "@common/eslint-config": "workspace:*",
+    "@common/tsconfig": "workspace:*",
+    "@common/rollup": "workspace:*",
+    "rollup": "~2.69.1",
+    "@types/node": "^14.17.2",
+    "@types/react": "^17.0.43",
+    "eslint": "^7.32.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
